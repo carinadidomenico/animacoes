@@ -1,0 +1,47 @@
+body{
+    background-color: lightgray;
+    display: flex;
+    overflow: hidden;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    }
+
+#animar{
+    height: 100px;
+    width: 100px;
+    border: dotted 2px red;
+    background-color: black;
+    transition-duration: 5s;
+    transition-timing-function: cubic-bezier(1,.74,.31,.5);
+    animation-name: move;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes move {
+    0%{
+        transform: rotate(0deg) translate(-100px, -100px);
+        background-color: purple;
+        }
+    25%{
+        transform: rotate(90deg) translate(100px, -100px);
+        background-color: darkgreen;
+    }
+    50%{
+        transform: rotate(180deg) translate(100px, 100px);
+        background-color: cyan;
+    }
+    75%{
+        transform: rotate(0deg) translate(-100px, 100px);
+        background-color: bisque;
+    }
+    100%{
+        transform: rotate(90deg) translate(-100px, -100px);
+        background-color: chartreuse;
+        }
+}
